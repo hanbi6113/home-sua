@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10.01 1</title>
+    <script>
+        // 과제1 내가 한 거
+    let m= 1.53;
+    let kg= 46;
+    let bmi= 46 / (m*m);
+    // let bmi= m2/kg;
+    console.log(`값 : ${bmi}`);
+
+    // 과제2 모르겠으니 다시 풀어볼 것 개틀림
+    let num1 = "10", num2 = "20"; //"따옴표는 문자열 숫자가 아니라는 뜻"
+    console.log(parseInt(num1)+parseInt(num2)); //parseInt는 문자를 숫자로 바꿔줌 다른 걸로는 
+    let total= "1020"
+    Number("1020");
+    total = 30;
+
+    // 선생님이 한 거 과제1
+    let height = 1.73, widht = 65.9;
+    let BMI = widht / (height * height);
+    console.log(`BMI 값 : ${BMI}`); //느낌표 옆에 있는 백틱을 사용해서 글쓰기
+
+    // 선생님이 한 거 과제2
+    let num3 = "10", num4 = "20";
+    console.log(num3+num4);
+    // 문자열 상태에서는 더하기 연산이 아니라 합치기
+    // 그래서 문자열을 더하기 연산이 사능항 숫자로 변환을 해야 한다.
+    // 문자열 -> 숫자 변환 (Number(), paeseInt(), parseFloat())
+    console.log(Number(num3)+parseInt(num4));
+
+    // 조건 연산자
+    // 만약 놀이동산 바이킹을 타는데 키가 140 이상만 가능하다.
+
+    let tall = 156;
+    const result = tall >= 140 ? "탑승가능" : "탑승불가" // 콘스트를 하는 이유는 더 이상 밑에 필요 없으니 확정을 주는 거래 이 값을 바꾸지 못 하도록 예를 들면 140의 관한 조건이나 답을 나를 제외한 모든 사람한테 건들지 말라고 하는 거랑 마찬가지.  
+    // 탑승가능이나 탑승불가에(a, b)대입 연산하지 말래 예)num1=20 다른 건 쌉가능
+
+    console.log( result);
+
+    // 동전 앞면 뒷면
+    //1이면 앞, 2는 뒷면
+    let coin = 1;
+    let res = ( coin === 1) ? "앞면":"뒷면";
+    console.log(res);
+
+    //2번 문제
+    let item1 = 12000, item2 = 3500, item3 = 8000;
+    let coo = item1 + item2 + item3;
+    res = (coo>=20000) ? "무료배송" : "배송비 3000원 추가";
+    console.log(res); //같은 변수를 쓸 수 있음 그래도 서로 정답 잘 나옴 let은
+
+    //3번 문제
+    let num = parseInt(Math.random()*10)+1; //parseInt 정수로 parseFloat 실수로 매스랜덤은 아무거나 0.0?1에서 0.9까지 거기에 10 곱하고 플러스 1을 한 거임 앞에 펄스인트를 넣은 이유는 소수점을 떼고 정수만 할 거기 때문. 1을 더하는 이유는 자연수 1을 만들려고
+    console.log(num);
+
+    res = (num % 2) === 1 ? "홀수":"짝수";
+    console.log(num);
+
+    //문자열 함수
+    let word = "i like banana";
+    //백틱 (템플릿 문자열);
+    console.log(`너는 어떤 과일을 "좋아하니?" <div class="box"> ${word} ` ); //백틱은 저거 디아이브이에 클래스를 줄 수 있음 디아이브이도 만들 수 있음...? 아마도
+
+    // 문자열 길이
+    console.log( word.length);
+
+    //문자열의 특정 문자 출력
+    console.log(word[0]); //이건 배열 1이 0으로 시작해서 0123이런 느낌? 위에 아이 라이크 바나나에서 0번째는 i라는 거
+    console.log( word.charAt(4));
+    
+    //문자열 거꾸로
+    console.log(word.split(" "));// 큰따옴표 두 개만 들어가는 게 아니라 진짜 띄어쓰기가 한 번 들어가야 한대 이건 띄어쓰기 기준으로 나누는 것
+    console.log(word.split("").reverse().join("") ); //스플릿이 하는 일은 분리, 나누는 것 띄어쓰기 빼면 모두 다 조인은 각자 배열을 합쳐주겠다는 함수
+
+    //문제 5
+
+    let fullName = "홍길동";
+    document.write(`안녕하세요, <b>저는 ${fullName}</b>입니다.`); //ln이 line 의 약자. 엔터 기능이 들어갔다는 뜻이라서 엔터가 가능한 건데 사실상 브라우저에선 그게 안 보인다  롸이트는 바디에 보여지게 하는 거래
+    document.writeln(`문자열의 길이 -> <b style="color:red;">${fullName.length}</b>`);
+    document.writeln(`성은 ${fullName.charAt(0)}입니다.`);
+    document.write(fullName.split("").reverse().join(""));
+
+    // 홍길동 학생의 성적 구하기
+    // 3과목 성적 구하기(총점, 평균)
+    let kor = 45, math = 68, eng = 92, his=77, sci=99;
+    let to = kor + math + en + his + sci;
+
+    //이순신 학생의 성적 구하기
+    kor = 65, math = 44, eng = 88;
+    to = kor + math + en;
+
+    //박문수 학생의 성적 구하기
+    kor = 65, math = 66, eng = 11;
+    to = kor + math + en;
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

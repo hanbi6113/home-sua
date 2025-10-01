@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10.01 2</title>
+    <script>
+
+        // 함수
+        function sum(a, b){ // 이건 호출 다른 걸 받아오라 A B는 매개변수
+            document.write(`더하기 ${a+b}`);
+            
+        }
+        // sum(10, 20); //함수 호출-실행하는 뜻 이때 매개변수 값 넣는다
+        // sum(44, 66);
+        // sum(80, 2); // 계속 추가 가능
+
+        // 두 정수의 곱하기 결과를 출력하는 함수를 만들어서 실행해 보세요
+
+        function gog(c, d){
+            document.write(`곱하기 결과 ${c*d}`);
+        }
+        // gog(100, 324);
+        // gog(13410, 324);
+        // gog(34, 95);
+        function calc(){
+            //document.write("잘 되고 있다.")
+            // $("num1").val()
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+            console.log(`${num1}, ${num2}`);
+
+            let res = Number(num1) + parseInt(num2);
+            document.getElementById("result").innerText = res;
+        }
+
+
+        //함수 표현식
+        // const gog2 = function(a, b){  
+        //     document.write(a*b);
+        // }
+        // 화살표 함수
+        const mul2 = (a, b) => { document.write(a*b);}
+
+        mul2(10, 2);
+
+        
+        let age = 20;
+        console.log(age);
+        let birth = 991022; 
+ 
+        function temp(){
+            let age = 10;  //원레 let은 재선언이 안 되지만 펀션이라는 아님 그게 아니어도 함수 안에 있으면 선언이 가능하고 쟤랑 얘랑 별개다
+            let name = "이성계";
+            console.log(`함수 내부 age : ${age} ${birth}`);
+        }
+
+        temp();
+        console.log( age);
+        console.log(name);
+    </script>
+</head>
+<body> 
+
+    <button type="button" onclick="sum(60, 80)"> 더하기 </button> <br>
+    <button type="button" onclick="gog(4, 8)"> 곱하기 </button>
+
+    <div>
+        <a href="javascript:calc();">더하기 계산</a> <!--href를 이용해서 함수 자바스크립트-->
+        <input type="number" id="num1">
+        <input type="number" id="num2">
+    </div>
+    <div id="result"></div>
+
+</body>
+</html>
