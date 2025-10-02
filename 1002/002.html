@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10.02 2 객체</title>
+    <script>
+        // 객체를 사용하면 좋은 점
+        // 많은 양의 데이터를 구분하여 저장하기 좋다.
+        // 키(key)에 따라 원하는 값 사용하기 편하다.
+        // 검색에 용이하다.
+
+
+        // 연산자 중에 우선 순위가 있음
+        // 연산자 순위를 무시하면 오류 or 내가 생각한 결과와 다름
+        // 연산자 우선순위는
+        // 1. ()
+        // 2. []
+        // 3. .
+        // 4. ->
+        // 5. ++, -- 근데 마마는 경우의 따라 130으로 떨어질 수도 있음
+
+        // name은 key에 해당하고 흰둥이는 value에 해당한다.
+        let dog = {name : "흰둥이" , breed : "몰티즈" , age : 5}; // 객체는 중괄호 배 어쩌고는 대괄호
+        console.log(dog["name"]);
+        //방식은 두 가지 위에는 문자열로 바꾸는 거 밑에는 점만 누르면 예시? 힌트창?이 뜨는데 그거 누르면 개쉬움
+        console.log(dog.name);
+        
+        dog.gender = "암컷"; //젠더라는 걸 추가한 거고 만약 젠더가 이미 있다면 바꾼 거 (추가, 수정)
+        delete dog.gender; //이건 삭제 명령어
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
