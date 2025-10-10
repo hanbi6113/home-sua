@@ -10,10 +10,24 @@
         // 엔진, 타이어, 시트, 냉각장치 등등
         // 제조사 : "현대", 자동차 이름 : "쏘나타", 엔진 : "3000cc"
         // 제조사 : "현대", 자동차 이름 : "아반테", 엔진 : "1600cc"
+
+        // 객체 다루기
+        // 배경색, 글자색, 글자 크기
+        const div = {bgcolor : "pink", ftcolor : 'white', size: 20}; //객체는 var 쓰면 안 된대 아예 객체는 반드시 중괄호 {}
+        const h1 = {bgcolor : "blue", ftcolor : "yellow", size : 15};
+        window.onload = function(){
+            let obj1 = document.getElementById("obj1"); //div 태그 가져오기
+            
+            obj1.style.background = div.bgcolor;
+            obj1.style.color = div.ftcolor;
+            obj1.style.fontSize = div.size;
+
+        }
     </script>
 
 </head>
 <body>
-    
+    <div id="obj1">객체 테스트용 div</div>
+    <h1 id="obj2">객체 테스트용 h1</h1>
 </body>
 </html>
