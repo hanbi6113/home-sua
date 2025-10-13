@@ -32,6 +32,37 @@ window.onload=function(){
         for( i  in userImgs){ //for ~ in : 배열과 같은 구조를 순차적으로 순화하기 위한 반복문
                               // 배열의 첫 번째는 0인덱스로 접근할 수 있다.
                               // 0 인덱스부터 마지막 인덱스까지 반복해준다
-             
+             userImgs[i].addEventListener("click", userSelect);
+
+        }
+}
+
+function userSelect(){
+    //alert(this.dataset.user);  // this는 현재 클릭한 img 태그를 의미
+                               // 클릭한 img 태그의 dataset(data-user) 값 출력
+    let userIdx = this.dataset.user;
+    this.classList.add('select');
+    // 태그에 클래스 이름 추가 하는 방법
+    // .classList.add('클래스 이름')
+    // 삭제는 .classList.remove('클래스 이름')
+    // 컴퓨터 가위바위보 setInterval 멈추기
+    clearInterval(comTurn);
+
+    // 컴퓨터의 가위바위보와 나의 가위바위보 비교하여 결과를 화면에 출력
+
+    idx = idx==1 ? 3: idx; // setInterval 종료 시점에 idx가 1 증가하므로 값 변경이 필요하다.
+    // 컴퓨터 가위바위보 멈출 때 1 증가하고 멈추므로 -1를 해줘야 된다.
+
+    // 값 비교 식 만들기
+    // 결과  출력 태그 가져오기
+     let result = document.querySelector("#result");
+
+     let res = parseInt(userIdx) - idx;
+     if( idx == userIdx) {// == 값만 비교, === 값과 타입 비교
+        result.innerHTML = `<b>비김</b>`;}
+        else if( res === -2 || res === 1 ){//내가 이기는 경우 (나:가위, 컴: 보자기 -> 1-3)
+            result.innerHTML = `<b>내가 이겼당</b>`;
+        }else{result.innerHTML = `<b>내가 졌다!</b>`;
+            
         }
 }
