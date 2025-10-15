@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{color: blue;}
+        label{margin-left: 20px;}
+    </style>
+</head>
+<body>
+    <h1>신체질량지수(BMI) 계산</h1>
+    <p>자신의 성별, 신장, 체중을 입력한 후 계산하기 버튼을 눌러주세요.</p>
+
+    <label>
+    <input type="radio" name="gender" value="male"> 남자
+  </label>
+  <label>
+    <input type="radio" name="gender" value="female"> 여자
+  </label>
+<br>
+  <label>신장:
+    <input type="number" name="cm" id="cm" placeholder="M 단위 작성 예: 153-1.53">m
+  </label>
+  <label>몸무게:
+    <input type="number" name="kg" id="kg">kg
+  </label>
+  <br>
+  <button id="bmi" onclick="info()">계산하기</button>
+  <div id="result"></div>
+</body>
+
+<script>
+function info(){
+            let cm = document.getElementById("cm").value; 
+            let kg = document.getElementById("kg").value;
+
+            let bmi =kg/(cm*cm) ;
+            document.getElementById("result").innerText = bmi; //이건 결과 나오게 하는 명령어
+        }
+</script>
+</html>

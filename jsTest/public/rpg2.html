@@ -43,11 +43,11 @@
              const loadBtn = document.querySelector("#load");
              loadBtn.onclick = () => {
                 let name = localStorage.getItem("name");
-                let job = localStorage.getTtem("job");
+                let job = localStorage.getItem("job");
                 let gender = localStorage.getItem("gender");
 
                 document.querySelector("#name").value = name;
-                document.querySelector("job").value = job;
+                document.querySelector("#job").value = job;
                 let radio = document.querySelector(`input[name="gender"][value="${gender}"]`);
                 radio.checked = true;
              }

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react</title>
+    <style>
+
+    </style>
+
+    
+</head>
+<body>
+    <script>
+        // number type
+        let n1 = 1234;
+        let n2 = 12.34;
+        console.log(typeof n1)
+        console.log(typeof n2)
+
+        // String type 스트링은 문자배열
+        let name = "홍길동"
+        let addr = "대전시 서구"
+        console.log(typeof name)
+        console.log(typeof addr)
+
+         // 사람 이름의 성만 추출하시오
+         // 예시: 홍길동 - 홍
+         console.log(name[0])
+         // 주민번호를 저장한 변수를 변경하고 출생년도만 추출하시오.
+        let age = "050000"
+        // let year = age[0]+age[1] 얘가 더 빠름
+        console.log("년도 :" + age.substring(0, 2)) // 2는 3이니까 2번까지 나오는 거 그래서 05 나옴 무조건 0부터 시작이니
+        
+
+        // Boolean type
+        let pass = true // 시험 통과 여부
+        let gender = false // 성별 (남, 여)
+        console.log("남자 : " + gender)
+
+        let num1 =20
+        let num2 = 30
+        let isBig = num1 > num2
+        console.log(isBig) // 출력 결과는?
+
+        // Null type 값이 현재 없다는 거래 Null이
+        let n= null;
+        console.log("널 타입: " +n)
+
+        //Undefined type
+        let ul;
+        console.log("ul :" + ul)
+        let u2 = undefined
+        console.log(u2)
+          //Array type
+          let arry =[1, 2, 3, 4]
+          console.log(typeof arry)
+          console.log(Array.isArray(arry))
+
+          //object type
+        let fruit = {
+            a: "apple", 
+            b: "banana", 
+            "c": "carrot",
+            10: "10000"
+        }
+
+        console.log(fruit.a)
+        console.log(fruit.b)
+        console.log(fruit.c)
+
+        // 객체참조 방법
+        console.log(fruit["10"])
+
+        // 배열 데이터 특징
+        let arr1 = [1, 2, 3, 4, 5]
+        console.log(arr1)
+
+        let arr2 = [1, 2, "홍길동", 4, "대전시", 123.45]
+        console.log(arr2)
+
+        // 홍길동에서 "홍"만 추출
+        console.log(arr2[2][0])
+        console.log(arr2[2].charAt(0))
+        console.log(arr2[2].substring(0, 1))
+        
+    </script>
+</body>
+</html>
