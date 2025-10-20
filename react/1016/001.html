@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <label for="year" >출생년도:</label>
+    <input type="number" name="year" id="year" placeholder="예: 2000">
+    <button onclick="click()">입력</button>
+    <div id="result"></div>
+
+    <script>
+        function click(){
+            let year = parseInt(document.getElementById("year").value);
+            let i = "미성년";
+            let j = "성년";
+            if(year>=2006){ 
+                console.log("성년");
+                document.getElementById("result").innerText= j;
+                // let result = document.getElementById("result").innerText="성년"s
+            }else{
+                console.log("미성년");
+                document.getElementById("result").innerText= i;}
+        }
+    </script>
+</body>
+</html>

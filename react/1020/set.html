@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set</title>
+</head>
+<body>
+    <!-- set은 집합이라는 객체
+     set 특징
+     1. 중복이 안 됨
+     2. 위치가 없다(위치를 구할 수 없다) -->
+     <div>
+    <p id="demo"></p>
+    </div>
+     <!-- 이게 textContent 라는 것 내용이라는 말 -->
+    <script>
+        // set(집합) : 중복된 데이터를 갖지 않는다.
+        const letters = new Set(["a", "b", "c"]);
+        const letters2 = new Set(["b", "c", "d"]);
+
+        const out = document.querySelector("#demo");
+        let text = "";
+
+        // const C= letters.intersection(letters2);
+        const C= letters.difference(letters2);
+        // console.log("교집합 :"+C);
+        console.log("차집합(순수한 A) :"+C);
+
+        for(const x of C){
+            text += x;
+        }
+
+        out.textContent = "차집합 :"+text;
+        // out.textContent = "교집합 :"+text;
+        // 집합의 원소 확인
+        cossole.log("==>"+letters.has("d"));
+
+
+
+        // letters.forEach(function(value){
+        //     text += value;
+        // });
+        for(const x of letters){
+            text += x;
+        }
+        // instance of 객체 존재여부 확인
+        // 객체의 실체가 있는가?
+        console.log(letters instanceof Set);
+
+
+        console.log(text); // 콘솔은 항상 출력
+        outLine = "<p>집합의 원소는 "+text+"</p>"
+        console.log("outLine");
+        out.textHTML =  outLine;// "<p>집합의 원소는"+text+"</p>";
+        
+
+        letters.add("d");
+        letters.add("e");
+        // letters[0] = "f"; 이런 건 안 된대 위치라서??
+
+        list1 = ["a", "b", "c", "d", "d"];
+        listText = "";
+        list1.forEach(function(val){
+            listText +=val;
+        });
+        list1.push("f");
+        console.log("list :"+listText[2]);
+
+        letters.forEach(function(value){
+            text += value;
+        });
+        console.log("-->"+text);
+        console.log("-->"+typeof letters);
+        outLine += "<p>집합의 원소는 "+"<strong>"+text+"</strong></p>";
+        out.innerHTML = outLine;//"<p>집합의 원소는 "+"<strong>"+text+"</strong></p>"; // innerHTML은 말 그대로 hrml로 한다는 말 원래 textContent 자주 씀 이건 내용이라는 말
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로또번호 추첨</title>
+    <style>
+        .ball{
+            display:inline-block;
+            border: 1px solid black;
+            border-radius: 20px;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            font-size:20px;
+            text-align: center;
+            margin-right: 20px;
+            background-color: pink;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="result">
+        추첨결과:   
+    </div>
+    <div id="bonus">
+        보너스:
+    </div>
+    <script>
+        const candidate = Array(45).fill().map((v, i)=>i+1); // array는 배열 이건 숫자를 준비했다는 뜻이래 45개 숫자 45개를 배열
+        // v는 현재 45개의 값 i는 44개 근데 i를 +1 했으니 45겠지  fill 지정한 값으로 채운다는 의미래
+        console.log('-->'+candidate[44])
+        const shuffle = []; // shuffle=셔플 섞는다는 의미
+
+        // 로또 섞기
+        while(candidate.length > 0){ // 0보다 큰 숫자가 나오게 계속 반복 while 이건 반복문
+            const random = Math.floor(Math.random()*candidate.length) //무작위 인덱트 뽑기 floor-소수점 빼고 Math.random()*candidate.length 45에서 소수점 빼고 랜덤으로 나온다라는 말
+            const spliceArray = candidate.splice(random,1) //뽑은 값은 배열에 들어있음 랜덤하게 1개를 뽑아서 console.log에 담아서 출력한다는 뜻
+            console.log("뽑은 공 :" + spliceArray);
+            const value = spliceArray[0];
+            shuffle.push(value); // shuffle 배열에 넣기
+            
+        }
+        // 6개 로또번호 뽑기
+        console.log(shuffle)
+        const winBalls = shuffle.slice(0, 6).sort((a, b)=>a-b); //6개면 바로 전까지 뽑는다고 하나 더 해서 6(7임) sort((a, b)=>a-b) 오름차순으로 한 거랭 ㅎㅎ
+        console.log("==>" + winBalls) // "==>"이 뜻은 이거라는 뜻인가 
+        const bonus = shuffle[6];
+
+        // 태그 생성하고 로또번호 출력 준비
+        const $result = document.querySelector('#result'); // 요즘은 getElement 대신에 querySelector 쓴대
+        const $bonus = document.querySelector('#bonus');
+        const drawBall = (number, $parent)=>{
+            const $ball = document.createElement('div');
+            $ball.className = 'ball';
+            // $ball.style.backgroundColor = 'green';
+            if(number < 10){
+                $ball.style.background = 'pink';
+            }else if(number < 20){
+                $ball.style.background = 'orange';
+            }else if(number < 30){
+                $ball.style.background = 'yellow';
+            }else if(number < 40){
+                $ball.style.background = 'green';
+            
+            }else{
+                $ball.style.background = 'blue';
+            }
+            $ball.textContent = number;
+            $parent.appendChild($ball);
+
+        };
+
+        // 6번 반복해서 로또번호를 화면에 출력
+        // 1초 간격을 유지하면서
+        for(let i=0; i<winBalls.length; i++){
+            setTimeout(()=>{
+                // 1초 후에 해야 할 일을 기술
+                drawBall(winBalls[i], $result)
+            },1000*(i+1));
+            }
+        // 보너스 출력 
+            setTimeout(()=>{
+                // 1초 후에 해야 할 일을 기술
+                drawBall(bonus, $bonus)
+            },7000);
+            
+    </script>
+</body>
+</html>
