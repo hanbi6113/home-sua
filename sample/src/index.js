@@ -5,12 +5,16 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Library from './chapter-03/Library';
 import Parent from './family/Parent';
+import NotificationList from './chapter-06/NotificationList';
+import Counter from './counter/counter';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Library />
     <Parent />
+    <Counter/>
+    <NotificationList/>
   </React.StrictMode>
 );
 
