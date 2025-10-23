@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>커피 자판기</title>
+    <style>
+        .product{
+            width: 100px;
+            height: 150px; 
+            border: 1px solid #ccc;
+            background-color: pink;
+            padding:10px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="containner">
+        <div>
+            <!-- 커피 상품 나열 -->
+        </div>
+        <ul>
+            <li class="product">
+                <p id="productName">밀크 커피</p>
+                <p>가격: <span id="milkPrice">300</span>원</p>
+                <button id="milk">밀크 커피</button>
+            </li>
+        </ul>
+        <div>
+            <!-- 커피 제어판 -->
+        </div>
+        <div>
+            <!-- 커피 배출구 -->
+        </div>
+        <div>
+            <p id="coffeeout"></p>
+        </div>
+    </div>
+</body>
+<script>
+    let milkBtn = document.querySelector("#milk");
+    let coffeeout = document.querySelector("#coffeeout");
+    let milkPrice = document.querySelector("#milkPrice").innerHTML;
+
+    milkBtn.addEventListener("click",milkProc);
+
+
+    function milkProc(){
+        //alert("밀크 버튼 클릭")
+        //coffeeout.innerHTML = "<b>"+ "밀크 커피 나왔습니당!" + "</b>";
+        coffeeout.innerHTML = `<b>${milkPrice}밀크 커피 나왔습니다.</b>`;
+    }
+</script>
+</html>
