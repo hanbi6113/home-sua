@@ -56,9 +56,10 @@
             text-align: right;
         }
     </style>
+    
 </head>
 <body>
-    <div id="containner">
+        <div id="containner">
         <!-- 커피 상품 나열 -->
         <div>
             <ul>
@@ -151,44 +152,52 @@
     
         //동전입력 처리
         function coinProc (event) {
-            // alert('동전을 입력해주세요.');
             let coin = event.target.innerHTML;
             coin = parseInt(coin);
             inMoney += coin;
             $inMoney.value = inMoney;
         }
 
-        function milkProc(event){
+        // 커피버튼 활성화
+        if(inMoney >= 300){
+            milkBtn.disabled = false;
+            creamBtn.disabled = false;
+            blackBtn.disabled = false;
+        }else if(inMoney >= 200){
+           blackBtn.disabled = false;
+        }
+
+        // 함수
+        function vmMoneyProc(event){
             let product = event.target.innerHTML;
-            console.log(product);
             let price = 0;
             price = coffeePrice[product];
             vmMoney += price;
-            //alert("밀크버튼 클릭")
-            //coffeeOut.innerHTML = "<b>"+milkPrice+"밀크커피 나왔습니다."+"</b>";
-            //vmMoney += event.target.innerHTML;
+            inMoney -= price;
+            return vmMoney;
+        }
+
+        function milkProc(event){
+            let vmMoney = vmMoneyProc(event);
+
             console.log("판매금액 :" + vmMoney);
             coffeeOut.innerHTML = `<p><b>${milkPrice} 원 ${pMilk} 나왔습니다.</b></p>`;
             $vmMoney.innerHTML = vmMoney;
-
-        
         }
         
         function creamProc(){
-            //alert("밀크버튼 클릭")
-            //coffeeOut.innerHTML = "<b>"+milkPrice+"밀크커피 나왔습니다."+"</b>";
-            coffeeOut.innerHTML = `<p><b> ${creamPrice} 원 ${pCream} 나왔습니다.</b></p>`;
-        
-        }
+            let vmMoney = vmMoneyProc(event);
 
+            coffeeOut.innerHTML = `<p><b> ${creamPrice} 원 ${pCream} 나왔습니다.</b></p>`;
+            $vmMoney.innerHTML = vmMoney;
+        }
         //블랙 커피
         function blackProc(){
-            //alert("밀크버튼 클릭")
-            //coffeeOut.innerHTML = "<b>"+milkPrice+"밀크커피 나왔습니다."+"</b>";
+            let vmMoney = vmMoneyProc(event);
+
             coffeeOut.innerHTML = `<p><b> ${blackPrice} 원 ${pBlack} 나왔습니다.</b></p>`;
-        
+            $vmMoney.innerHTML = vmMoney;
         }
 </script>
 </body>
-
 </html>
