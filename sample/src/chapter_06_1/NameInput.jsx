@@ -8,7 +8,7 @@ function NameInput(){
     // 컴포넌트가 처음 마운트될 때 실행
     useEffect(()=>{ // useEffect : 컴포넌트가 렌더링되거나 업데이트될 때
         console.log("컴포넌트가 마운트 되었습니다");
-    },[]);
+    },[name]);
 
     // name이 변경될 때마다 실행
     useEffect(()=>{ // useEffect에 [의존성] 의존성을 넣어주면 그 값이 업데이트 될 때마다 실행된다(감시원 역할)
@@ -27,7 +27,7 @@ function NameInput(){
             placeholder="이름입력"
             />
 
-            <p>안녕하세요, {name || "익명"} 님! </p>
+            <p>안녕하세요, {name || "익명"} 님! </p> 
         
         </div>
     )
