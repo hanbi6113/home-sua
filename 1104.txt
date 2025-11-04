@@ -1,0 +1,7 @@
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+
+npm create vite@latest (mypage) 폴더 이름
+
+
