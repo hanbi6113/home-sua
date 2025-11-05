@@ -7,10 +7,18 @@ import Home from './page/Home';
 import About from './page/About';
 import Contact from './page/Contact';
 import Portfolio from './page/Portfolio';
+import Welcome from './page/Welcome'
+import Count from './page/Count'
+import ProfileCard from './page/ProfileCard'
+import LikeButoon from './page/LikeButton'
 
 function App() {
   return (
-    <div>
+    <>
+      <Welcome name="이순신" age="24"/>
+      <ProfileCard name="조수아" age="21" hobby="춤"/>
+      <Count/>
+      <LikeButoon/>
       <Router>
         <Routes>
           <Route path="/*" element={ <Home />} />
@@ -19,7 +27,7 @@ function App() {
           <Route path="/Portfolio" element={ <Portfolio/>} />
         </Routes>
       </Router>
-    </div>
+    </>
   )
 }
 

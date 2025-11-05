@@ -9,12 +9,15 @@ import a6 from '../img/a6.png';
 export default function PortfolioIndex(){
     return(
         <div>
-            <img src="a1.png"/>
-            <img src="a2.png"/>
-            <img src="a3.png"/>
-            <img src="a4.png"/>
-            <img src="a5.png"/>
-            <img src="a6.png"/>
+            <div style={{fontSize: "25px", fontWeight: "bold" }}>나의 작품</div>
+        <div style={{width: "100%"}}>
+                <img src={a1} style={{width: "400px", height: "400px"} }/>
+                <img src={a2} style={{width: "400px", height: "400px"} }/>
+                <img src={a3} style={{width: "400px", height: "400px"} }/>
+                <img src={a4} style={{width: "400px", height: "400px"} }/>
+                <img src={a5} style={{width: "400px", height: "400px"} }/>
+                <img src={a6} style={{width: "400px", height: "400px"} }/>
+            </div>
         </div>
     );
 }
