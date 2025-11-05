@@ -7,6 +7,8 @@ export default function MainMenu(){
             <Link to="/propstate">props+state</Link>
             <Link to="/boardMake">게시판 작성 문제</Link>
             <Link to="/Member">멤버</Link>
+            <Link to="/store">상점 구매</Link>
+            <Link to="/MyStudy">하루 일과</Link>
         </div>
      )
 }
