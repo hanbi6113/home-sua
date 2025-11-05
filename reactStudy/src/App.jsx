@@ -1,34 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import './App.css'
 
+// 컴포넌트 import
+import MainMenu from './component/MainMenu';
+import Info from "./component/study1/Info";
+import Board from "./component/study1/Board";
+import Member from "./component/study1/Member";
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    
+      <Router>
+        <Routes>
+          <Route path="/" element={<MainMenu/>}/>
+          <Route path="/propstate" element={<Info/>}/>
+          <Route path="/boardMake" element={<Board/>}/>
+          <Route path="/Member" element={<Member/>}/>
+        </Routes>
+      </Router>
+    
   )
 }
 
