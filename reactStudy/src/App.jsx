@@ -13,6 +13,7 @@ import Student from './component/study2/Student'
 import Memo from './component/study2/Memo'
 import Buyer from './component/study2/Buyer'
 import TestEffect from './component/study3/TestEffect'
+import TestFetch from './component/study3/TestFetch'
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/simplememo" element={ <Memo />} />
           <Route path="/productBuy/*" element={ <Buyer />} />
           <Route path='/effect1' element={<TestEffect/>}/>
+          <Route path='/effect2' element={<TestFetch/>}/>
 
         </Routes>
       </Router>

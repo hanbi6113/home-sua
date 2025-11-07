@@ -15,6 +15,7 @@ export default function MainMenu(){
             <Link to="/simplememo" className='menu'>간단메모</Link>
             <Link to="/productBuy" className='menu'>장바구니</Link>
             <Link to="/effect1" className='menu'>Effect 살펴보기</Link>
+            <Link to="/effect2" className='menu'>Fetch 살펴보기</Link>
         </div>
     );
 }
