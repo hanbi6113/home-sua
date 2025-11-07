@@ -14,7 +14,7 @@ export default function MyStudy(){
                 <Link to="/" className="home">HOME</Link>
     
                 <div>
-                    7시 ~ 8시 : <button> <input type="text" onClick={(e)=>setA(e.target.value)}/></button> <br/>
+                    7시 ~ 8시 : <button><input type="text" onClick={(e)=>setA(e.target.value)}/></button> <br/>
                     9시 ~ 17시 30분 : <input type="text" onClick={(e)=>setAa(e.target.value)}/> <br/>            
                     18시 30분 ~ 19시 30분 : <input type="text" onClick={(e)=> setAaa(e.target.value)}/> <br/>
                     19시 30분 ~ 20시 30분: <input type="text" onClick={(e)=> setAaaa(e.target.value)}/> <br/>
