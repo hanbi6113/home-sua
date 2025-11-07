@@ -4,7 +4,7 @@ export default function TestFetch(){
     const [users, setUsers] = useState([]);
     useEffect(
         ()=>{
-            fetch("https;//jsonplaceholder.typicode.com/users")
+            fetch("https://jsonplaceholder.typicode.com/users")
             .then((response)=> response.json()) // json으로 변환
             .then((date) => setUsers(date));
         }, []
@@ -14,9 +14,9 @@ export default function TestFetch(){
             <h2>데이터 출력</h2>
             <ul>
                 {
-                    users.map((u)=>{
+                    users.map((u)=>(
                         <li>{u.name}:{u.email}</li>
-                    })
+                    ))
                 }
             </ul>
         </>

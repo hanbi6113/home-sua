@@ -29,7 +29,7 @@ function App() {
           <Route path="/simplememo" element={ <Memo />} />
           <Route path="/productBuy/*" element={ <Buyer />} />
           <Route path='/effect1' element={<TestEffect/>}/>
-          <Route path='/effect2' element={<TestFetch/>}/>
+          <Route path='/fetch2' element={<TestFetch/>}/>
 
         </Routes>
       </Router>
