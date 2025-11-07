@@ -21,11 +21,10 @@ export default function Buyer(){
             <h2>계림핑</h2>
             <Link to="/productBuy/add">입력</Link>
             <Link to="productBuy/cart">목록</Link>
-            <ProuductForm/>
-            <CartList/>
+          
             <Routes>
                 <Route path="add" element={<ProuductForm onAdd={addCart}/>}/>
-                <Route path="cart" element={<CartList cart={cart}/>}/>
+                <Route path="cart" element={<CartList cart={cart} onRemove={removeCart}/>}/>
             </Routes>
             </>
     );

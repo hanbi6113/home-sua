@@ -19,7 +19,7 @@ export default function ProuductForm({onAdd}){ // (props)-> props.onAdd 으로�
         <form onSubmit={submit}> {/* form은 데이터 전달하는 역할 */}
         <input type="text" placeholder="상품명" onChange={(e)=> setName(e.target.value)} value={name}/>
         <input type="number" placeholder="상품 가격" onChange={(e)=> setPeice(e.target.value)} value={price}/>
-        <buttom>장바구니</buttom>
+        <button>장바구니</button>
         </form>
         </>
     );
