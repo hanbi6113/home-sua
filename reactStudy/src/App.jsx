@@ -10,13 +10,14 @@ import Store from './component/study1/Store'
 import Schedule from './component/study2/Schedule'
 import Student from './component/study2/Student'
 import Memo from './component/study2/Memo'
-import Buyer from './component/study3/Buyer'
+import Buyer from './component/study2/Buyer'
 import TestEffect from './component/study3/TestEffect'
 import TestFetch from './component/study3/TestFetch'
 import DataList from './component/study4/DataList'
 import DataList2 from './component/study4/DataList2'
 import UserInfo from './component/study4/UserInfo'
 import TodoList from './component/study4/TodoList'
+import Attend from './component/study4/Attend'
 function App() {
   return (
       <Router>
@@ -36,6 +37,7 @@ function App() {
           <Route path="/map2" element={ <DataList2 />} />
           <Route path="/users" element={ <UserInfo/>} />
           <Route path="/todo" element={ <TodoList />} />
+          <Route path="/attend" element={ <Attend />} />
         </Routes>
       </Router>
 
