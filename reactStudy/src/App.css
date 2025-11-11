@@ -41,13 +41,19 @@
   color: #888;
 }
 
+
 .home{
-  position: fixed; 
-  left: 20px; top: 20px;
+  position:fixed;
+  left:20px; top:20px;
 }
 .nav{
-  display: flex;
-  flex-wrap: wrap; /* 줄바꿈 한다는 말이래 */
-  gap: 10px;
-  width: 1000px;
+  display:flex;
+  flex-wrap: wrap;
+  gap:10px;
+  width:1000px;
+}
+
+.menu{
+  border-right:2px solid #ccc;
+  padding-right:10px;
 }
