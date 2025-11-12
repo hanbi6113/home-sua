@@ -13,7 +13,8 @@ import LineChart4 from './component/LineChart4';
 import DongnutChart1 from './component/DougnutChart1';
 import PiChart from './component/PiChart';
 import DongnutChart2 from './component/DougnutChart2';
-
+import DongnutChart3 from './component/DoungnutChart3';
+ 
 
 function App() {
 const [show, setShow] = useState(null);
@@ -35,6 +36,7 @@ const btClass = (name) =>
     <button onClick={()=> setShow("I")} className={btClass("I")}>기본 도넛</button>
     <button onClick={()=> setShow("J")} className={btClass("J")}>원형 차트</button>
     <button onClick={()=> setShow("K")} className={btClass("K")}>반 도넛 차트</button>
+    <button onClick={()=> setShow("L")} className={btClass("L")}>이중 도넛 차트</button>
     </div>
 
     <div className='mt-8'>
@@ -49,6 +51,7 @@ const btClass = (name) =>
      { show === "I" && <DongnutChart1/>} 
      { show === "J" && <PiChart/>} 
      { show === "K" && <DongnutChart2/>} 
+     { show === "L" && <DongnutChart3/>} 
     </div>
     </>
   )
