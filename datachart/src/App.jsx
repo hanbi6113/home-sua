@@ -15,6 +15,8 @@ import PiChart from './component/PiChart';
 import DongnutChart2 from './component/DougnutChart2';
 import DongnutChart3 from './component/DoungnutChart3';
 import MixChart from './component/MixChart';
+import BarChartCard from './component/BarChartCard';
+import ExpendInput from './component/ExpendInput';
  
 
 function App() {
@@ -39,6 +41,8 @@ const btClass = (name) =>
     <button onClick={()=> setShow("K")} className={btClass("K")}>반 도넛 차트</button>
     <button onClick={()=> setShow("L")} className={btClass("L")}>이중 도넛 차트</button>
     <button onClick={()=> setShow("M")} className={btClass("M")}>혼합 차트</button>
+    <button onClick={()=> setShow("N")} className={btClass("N")}>지출 내역</button>
+    
     </div>
 
     <div className='mt-8'>
@@ -54,7 +58,8 @@ const btClass = (name) =>
      { show === "J" && <PiChart/>} 
      { show === "K" && <DongnutChart2/>} 
      { show === "L" && <DongnutChart3/>} 
-     { show === "M" && <MixChart/>} 
+     { show === "M" && <MixChart/>}  
+     { show === "N" && <ExpendInput/>} 
     </div>
     </>
   )
