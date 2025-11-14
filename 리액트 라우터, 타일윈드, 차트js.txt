@@ -1,0 +1,8 @@
+리액트 깔기 - npm create vite@latest (만들 이름)
+라우터 깔기 - npm i react-router-dom@latest
+테일윈드 npm i -D tailwindcss @tailwindcss/vite
+테일윈드 index.css- @import "tailwindcss";
+테일윈드 vite - 상단- import tailwindcss from '@tailwindcss/vite' 하단-tailwindcss(),
+
+차트JS - npm i chart.js react-chartjs-2
+
