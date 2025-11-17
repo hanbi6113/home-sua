@@ -8,3 +8,8 @@
 
 파이어 베이스 npm install firebase
 
+a(); // a 함수 실행
+b(); // b 함수 실행
+function a(){  }
+
+const b = () =>{ };
