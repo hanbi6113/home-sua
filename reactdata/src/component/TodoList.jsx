@@ -48,7 +48,7 @@ export default function TodoList(){
                 todos.map( (t) => (
                     <li key={t.id} className="flex items-center justify-between ">
                         <button onClick={ () => toggoleDone(t) } className="cursor-pointer">
-                            <span className={ t.done ? "line-through" : ""  +"text-white "}>
+                            <span className={ t.done ? "line-through" : ""  +"text-black "}>
                                 {t.text}
                                 </span>
                         </button>

@@ -44,9 +44,9 @@ export default function ToDoForm(){
                 <input type="text" value={text}
                 onChange={(e)=> setText(e.target.value)}
                 placeholder="할 일을 입력해라"
-                className="rounded border bg-white border-gray-500 px-3 py-2"/>
+                className="rounded border bg-black border-gray-500 px-3 py-2"/>
                 <button disabled={loading} // disabled은 사용하지 않겠다는 명령어
-                className="rounded bg-green-600 px-6 py-2.5 text-white">{ loading ? "추가 중..." : "추가"}</button> {/* 조건 ? 참일 때 값 : 거짓일 때 값 */}
+                className="rounded bg-green-600 px-6 py-2.5 text-black">{ loading ? "추가 중..." : "추가"}</button> {/* 조건 ? 참일 때 값 : 거짓일 때 값 */}
             </form>
         </div>
     );

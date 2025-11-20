@@ -2,17 +2,25 @@ import { BrowserRouter as Router , Routes, Route, Link } from "react-router-dom"
 import TodoPage from "./paga/TodoPage"
 import SignIn from "./paga/SignIn"
 import SignUp from "./paga/SignUp"
+import AuthStatus from "./component/AuthStatus"
+import ProductPage from "./component/productPage"
 
 function App() {
   
   return (
     <div>
-      
+     
       <Router>
+         <AuthStatus/>
         <Routes>
+          <Route path="/" element={
+            <ProductPage>
+              <TodoPage/>
+            </ProductPage>
+          }/>
           <Route path="/" element={ <TodoPage />} />
           <Route path="/signUp" element={  <SignUp /> } />
-          <Route path="/singIn" element={ <SignIn />  } />
+          <Route path="/signIn" element={ <SignIn />  } />
         </Routes>
       </Router>
     </div>
